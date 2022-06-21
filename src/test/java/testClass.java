@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class testClass {
 
@@ -25,5 +26,14 @@ public class testClass {
         manipulatedstring.setString("1,5");
         int length = manipulatedstring.add("1,5");
         assertEquals(6, length);
+    }
+    @Test
+    public void testRemoveNthCharacter4() {
+
+        manipulatedstring.setString("IllegalArgument");
+        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () ->
+                        manipulatedstring.add("-1,5"),
+                "Error" );
+
     }
 }

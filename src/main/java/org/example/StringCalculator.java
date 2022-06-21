@@ -10,6 +10,9 @@ public class StringCalculator {
     }
 
     public static int add(final String numbers) {
+        if(numbers.contains("-")){
+            throw new IllegalArgumentException("Error");
+        }
         int returnValue = 0;
         String[] numbersArray = numbers.split(",|\n");
         for (String number : numbersArray) {
