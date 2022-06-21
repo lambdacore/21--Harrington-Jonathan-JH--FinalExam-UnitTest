@@ -22,12 +22,6 @@ public class testClass {
     }
 
     @Test
-    public void basictest() {
-        manipulatedstring.setString("1,5");
-        int length = manipulatedstring.add("1,5");
-        assertEquals(6, length);
-    }
-    @Test
     public void testNegativeNumbers() {
 
         manipulatedstring.setString("IllegalArgument");

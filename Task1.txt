@@ -1,0 +1,5 @@
+Task 1
+1- First write a test and show that it will fail
+2- Then implement enough code to get it to pass
+3- Keep chaning the code until the test passes
+4- Refactor
