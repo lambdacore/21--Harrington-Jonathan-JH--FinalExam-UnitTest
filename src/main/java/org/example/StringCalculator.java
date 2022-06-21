@@ -17,7 +17,10 @@ public class StringCalculator {
         String[] numbersArray = numbers.split(",|\n");
         for (String number : numbersArray) {
             if (!number.trim().isEmpty()) {
-                returnValue += Integer.parseInt(number.trim());
+                if(1000 > Integer.parseInt(number.trim())) {
+                    returnValue += Integer.parseInt(number.trim());
+                }
+
             }
         }
         return returnValue;

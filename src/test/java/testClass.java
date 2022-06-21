@@ -22,18 +22,24 @@ public class testClass {
     }
 
     @Test
-    public void testCount1() {
+    public void basictest() {
         manipulatedstring.setString("1,5");
         int length = manipulatedstring.add("1,5");
         assertEquals(6, length);
     }
     @Test
-    public void testRemoveNthCharacter4() {
+    public void testNegativeNumbers() {
 
         manipulatedstring.setString("IllegalArgument");
         IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () ->
                         manipulatedstring.add("-1,5"),
                 "Error" );
 
+    }
+    @Test
+    public void testBigNumber() {
+        manipulatedstring.setString("1,5");
+        int length = manipulatedstring.add("1,1000");
+        assertEquals(1, length);
     }
 }
